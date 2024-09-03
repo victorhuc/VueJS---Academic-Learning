@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Vue</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <!-- TREINANDO O V-BIND -->
+    <!-- <div id="app"> 
+        <a v-bind:href="url">Visite o site do VueJS</a>
+    </div> -->
+
+    <!-- -- TREINANDO O V-MODEL -->
+    <!-- <div id="app">
+        <input type="text" v-model="message" placeholder="Digite uma mensagem">
+        <p>{{ message }}</p>
+    </div> -->
+
+    <!-- <div id="app">
+        <p v-if="seen">Agora você vê</p>
+        <p v-else>Agora você não vê</p>
+    </div>-->
+<!-- 
+    <div id="app">
+        <h1 v-if="status">{{ titulo }}</h1>
+        <h1 v-else="status">Não existe titulo!</h1>
+        <h2 v-show="status">{{ titulo }}</h2>
+    </div>  -->
+
+    <!-- <div id="app">
+        <div v-if="usuario.id == 1">
+            ID: {{ usuario.id}}, <br>
+            Nome: {{usuario.nome}}, <br>
+            Email: {{usuario.email}}, <br>
+            Profissao: {{usuario.profissao}}
+        </div>
+        <div v-else>
+            Não existe usuario com o ID: 1
+        </div>
+    </div> -->
+
+    <!-- <div id="app">
+        <ul id="example-1">
+            <li v-for="item in items" :key="item.id">
+                {{ item.text }}
+            </li>
+        </ul>
+    </div> -->
+
+    <div id="app">
+        <h1>{{ titulo }}</h1>
+        <ul>
+        <li v-for="item in linguagens">{{ item }}</li><br>
+        <li v-for="item in linguagens">{{ item.nome }}</li><br>
+        <li v-for="item in linguagens">{{ item.nome }}{{ " - " }}{{ item.status }}</li><br>
+        <li v-for="(item, index) in linguagens">{{ index + " - "}}{{ item }}</li><br>
+        <li v-for="(item, index) in linguagens">{{ index + " - " }}{{ item.nome }}</li>
+        </ul>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
